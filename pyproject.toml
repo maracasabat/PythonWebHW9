@@ -8,6 +8,7 @@ authors = ["Ivan Yevpat <maracasabat@gmail.com>"]
 python = "^3.10"
 SQLAlchemy = "^1.4.40"
 alembic = "^1.8.1"
+Faker = "^14.2.0"
 
 [tool.poetry.dev-dependencies]
 

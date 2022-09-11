@@ -2,15 +2,15 @@ import argparse
 import sys
 from sqlalchemy.exc import SQLAlchemyError
 
-from src.seed import add_user, delete_user, get_all_users, get_user, update_user
+from src.seed import add_user, delete_user, get_all_users, get_user, update_user, add_random_users
 
-ACTIONS = {get_all_users: 'show', add_user: 'add',
+ACTIONS = {get_all_users: 'show', add_user: 'add', add_random_users: 'add_random',
            update_user: 'update', delete_user: 'remove', get_user: 'get'}
 
 
 def main():
     parser = argparse.ArgumentParser(description='Address Book')
-    parser.add_argument('--action', help='Command: add, update, get, remove, show')
+    parser.add_argument('--action', help='Command: add, update, get, remove, show, add_random')
     parser.add_argument('--id', help='User ID')
     parser.add_argument('--name', help='User name')
     parser.add_argument('--phone', help='User phone')
